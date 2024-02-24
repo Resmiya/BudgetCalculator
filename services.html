@@ -19,7 +19,7 @@
     <!-- --------------------------nav bar---------------------------- -->
 <nav class="navbar navbar-expand-lg" style="background-color: rgb(114,47,250); color:white;">
         <div class="container-fluid">
-            <a class="navbar-brand active" href="#">Budgect Calculator</a>
+            <a class="navbar-brand active" href="#" style="text-decoration: none; font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;">Budgect Calculator</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -43,32 +43,35 @@
     <!--  -->
     <div class="container w-75 mt-5" style="display: flex;flex-wrap: wrap;">
         <div class="card w-50">
-            <h5 class="card-header">Featured</h5>
+            <h5 class="card-header">Add Income</h5>
             <div class="card-body ">
                <div class="mb-4"> <input type="text" class="form-control" id="incometype"  placeholder="Enter Income Type "></div>
                 <div class="mb-4"><input type="text" class="form-control" id="income" class="w-100 mt-4" placeholder="Enter Amount"></div>
-               <div class="mb-4 text-center"> <button type="button" class="btn btn-outline-dark" onclick="submitincome()">Info</button></div>
+               <div class="mb-4 text-center"> <button type="button" class="btn btn-outline-dark" onclick="submitincome()">Save</button></div>
             </div>
           </div>
           <div class="card w-50">
-            <h5 class="card-header">Featured</h5>
+            <h5 class="card-header">Add Expense</h5>
             <div class="card-body">
                 <div class="mb-4"><input type="text" class="form-control" id="expntype" class="w-100"  placeholder="Enter Expense Type"></div>
                <div class="mb-4"> <input type="text" class="form-control" id="expn" class="w-100" placeholder="Enter Amount "></div>
-               <div class="mb-4 text-center"> <button type="button" onclick="submitexpn()" class="btn btn-outline-dark">Info</button></div>
+               <div class="mb-4 text-center"> <button type="button" onclick="submitexpn()" class="btn btn-outline-dark">Save</button></div>
             </div>
         </div>
         
         <div class="card w-50 my-3" style="background-color:rgb(140, 228, 140) ;">
             <div class="card-body" >
+                <h2 class="text-center">Your Balance </h2>
+
                 <h1 id="bal1"></h1>
-              This is some text within a card body.
+             
             </div>
           </div>
           <div class="card w-50 my-3" style="background-color:pink;">
             <div class="card-body">
+                <h2 class="text-center">Your Expense</h2>
                 <h1 id="s1"></h1>
-              This is some text within a card body.
+            
             </div>
         </div>
     </div>
