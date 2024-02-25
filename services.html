@@ -229,17 +229,16 @@ function viewMore(){
     // table_box2.classList.toggle('d-none')
     tableContainer.classList.toggle('d-none');
     if(tableContainer.classList.contains('d-none')){
+
         viewmore.innerText = 'View More';
+       
+    
     }
     else{
         viewmore.innerText = 'View Less';
     }
 }
 user_wrapper = document.getElementById('user_wrapper');
-
-
-
-   //////////////////////////////// 
 console.log(b.income);
         console.log(b.expense.length);
         htmlData = ''
@@ -268,7 +267,7 @@ console.log(b.income);
         }
         );
         var xValues = b.expense.map(n => n.type);
-        var yValues = b.expense.map(n => parseFloat(n.amt));
+        var yValues = b.incometype.map(n => parseFloat(n.amt));
         var barColors = [
             "#b91d47",
             "#00aba9",
@@ -276,11 +275,43 @@ console.log(b.income);
             "#e8c3b9",
             "#1e7145"
         ];
-      
+      /////////////////////////////////////////////////
+      new Chart("myChart", {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Expense Chart"
+                }
+            }
+        });
+
+
+
+   //////////////////////////////// 
+
     
     
     
-    
+
+
+
+
+
+
+
+
+    ////////////////////////////////
+        function printDetails(){
+    window.print();
+        }
     </script>
 
 </body>
